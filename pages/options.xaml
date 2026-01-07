@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="rappel.pages.options"
+             Title="options">
+    <ScrollView>
+        <VerticalStackLayout>
+            <HorizontalStackLayout Padding="30,0"
+Spacing="25">
+                <Label Text="activer/desactiver l'application" Padding="0,30" />
+                <Switch Toggled="majact" x:Name="actdes" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Padding="30,0" Spacing="25">
+                <Label Text="rafraichir la position tout les :" Padding="0,30" />
+                <Entry Keyboard="Numeric" Unfocused="majintervalle" Placeholder="5" WidthRequest="40" HeightRequest="40" MaxLength="10" x:Name="entrerintervalle"/>
+                <Label Text="secondes" Padding="0,30"/>
+            </HorizontalStackLayout>
+            <Label Text="options des messages :" Padding="30,30"/>
+            <HorizontalStackLayout Padding="30,30">
+                <Label Text="couleur du fond : " />
+                <Button Text="changer la couleur" Clicked="Button_cback" x:Name="btncback" HeightRequest="40" TranslationY="-10" ></Button>
+            </HorizontalStackLayout>
+            <Grid x:Name="colorback"  RowSpacing="4" ColumnSpacing="2"></Grid>
+            <HorizontalStackLayout Padding="30,30">
+                <Label Text="couleur du texte : " />
+                <Button Text="changer la couleur" Clicked="Button_ctxt" x:Name="btnctxt" HeightRequest="40" TranslationY="-10"></Button>
+            </HorizontalStackLayout>
+            <Grid x:Name="colortxt" RowSpacing="4" ColumnSpacing="2"></Grid>
+            <HorizontalStackLayout Padding="30,30">
+                <Label Text="taille du texte : " />
+                <Entry Keyboard="Numeric" Unfocused="majttxt"  Placeholder="18" WidthRequest="40" HeightRequest="40" TranslationY="-10" MaxLength="3" x:Name="entrerttxt" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
